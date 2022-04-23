@@ -1211,6 +1211,7 @@ RectTransform:
   - {fileID: 944868642}
   - {fileID: 918883085}
   - {fileID: 651237773}
+  - {fileID: 867496877}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1232,6 +1233,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1869843095}
+--- !u!1 &207907848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207907849}
+  - component: {fileID: 207907851}
+  - component: {fileID: 207907850}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &207907849
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207907848}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 904730963}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &207907850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207907848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7c8df7944b90c714d85a88de0a256383, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ' CONTINUE >'
+--- !u!222 &207907851
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207907848}
+  m_CullTransparentMesh: 1
 --- !u!1 &232314403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2777,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  dialogue:
+    name: "L\xE9gende de Thewall"
+    sentences:
+    - "Il \xE9tait une fois, \xE0 l'est du continent, un petit royaume appel\xE9
+      Tajord. Les gens y vivaient dans la paix et la prosp\xE9rit\xE9. Un jour, un
+      groupe de sorciers arriva dans la capitale du royaume : Thewall. Leurs v\xEAtements
+      et leurs baguettes \xE9taient si sp\xE9ciaux qu'ils ont attir\xE9 beaucoup
+      d'attention. La premi\xE8re personne qui a r\xE9ussi \xE0 les identifier \xE9tait
+      un vieil \xE9rudit. Il \xE9tait tr\xE8s surpris de voir les sorciers ici. D'apr\xE8s
+      les rumeurs, les"
+    - "sorciers vivent isol\xE9s du monde. Dans certains livres, il est dit que les
+      sorciers ont des pouvoirs qui leur permettent de manipuler le temps, de contr\xF4ler
+      la nature ou m\xEAme de ressusciter des \xEAtres vivants. Cependant, les sorciers
+      sont si rares qu'une personne normale n'a pratiquement aucune chance d'en voir
+      un dans sa vie. La nouvelle de ces sorciers se r\xE9pandit rapidement dans
+      la ville et finit par atteindre le palais du"
+    - "roi. Pour \xE9tablir une relation amicale entre les sorciers et le royaume,
+      le roi de Tajord en personne est venu les recevoir avec la plus grande courtoisie.
+      Le groupe est compos\xE9 d'une grande sorci\xE8re et de ses 5 disciples. Ils
+      souhaitaient se reposer ici quelques jours, puis partir en voyage. Pendant
+      ces jours, le roi leur a montr\xE9 les plus beaux endroits de la capitale,
+      les a accueillis avec des repas compos\xE9s des aliments"
+    - "les plus rares et leur a offert les cadeaux les plus luxueux. Mais toutes
+      ces actions vont conduire le royaume au p\xE9ril. Parmi les adeptes de la grande
+      sorci\xE8re, une apprentie sorci\xE8re nomm\xE9e Wendy voulait s'emparer des
+      tr\xE9sors du pays. Mais elle n'avait pas assez de pouvoir pour s'attaquer
+      \xE0 l'ensemble de Tajord. Elle a donc d\xE9cid\xE9 de revenir quand elle serait
+      devenue une vraie sorci\xE8re."
+    - "Le temps passe vite, 5 ans se sont \xE9coul\xE9s depuis le d\xE9part des sorciers
+      de Thewall. Ce jour-l\xE0, le royaume entier c\xE9l\xE9brait la succession
+      du prince au tr\xF4ne. La c\xE9r\xE9monie s'est d\xE9roul\xE9e dans le palais
+      du roi sous les yeux de la noblesse. Tout se passait comme pr\xE9vu. Mais soudain,
+      juste avant le passage du tr\xF4ne, un garde entra dans le lieu et interrompit
+      l'\xE9v\xE9nement. Les invit\xE9s d\xE9tourn\xE8rent les yeux de lui, puis
+      furent effray\xE9s"
+    - "par ce qu'ils virent : Le corps du garde se tordait de fa\xE7on \xE9trange,
+      certaines parties \xE9taient m\xEAme gonfl\xE9es. Sa peau prenait une couleur
+      rouge sombre qui ressemblait \xE0 celle d'un homard cuit. Le garde, dont le
+      visage exprimait une douleur insupportable, a cess\xE9 de bouger apr\xE8s quelques
+      instants. Et juste apr\xE8s \xE7a, son corps a explos\xE9. Les petits morceaux
+      de son cadavre ont \xE9t\xE9 jet\xE9s sur les personnes pr\xE9sentes dans la "
+    - "par ce qu'ils virent : Le corps du garde se tordait de fa\xE7on \xE9trange,
+      certaines parties \xE9taient m\xEAme gonfl\xE9es. Sa peau prenait une couleur
+      rouge sombre qui ressemblait \xE0 celle d'un homard cuit. Le garde, dont le
+      visage exprimait une douleur insupportable, a cess\xE9 de bouger apr\xE8s quelques
+      instants. Et juste apr\xE8s \xE7a, son corps a explos\xE9. Les petits morceaux
+      de son cadavre ont \xE9t\xE9 jet\xE9s sur les personnes pr\xE9sentes dans la "
+    - "pi\xE8ce. Apr\xE8s un court silence, les gens ont commenc\xE9 \xE0 crier,
+      ils \xE9taient terrifi\xE9s par ce qu'ils venaient de voir et se sont pr\xE9cipit\xE9s
+      pour s'\xE9chapper du palais. Mais en quittant les lieux, ces nobles ont vu
+      une sc\xE8ne encore plus atroce : Sous un ciel noir, la capitale, qui ressemblait
+      \xE0 une utopie, \xE9tait tach\xE9e de rouge par le feu et le sang. Les habitants
+      de la ville se promenaient dans les rues et ont fini par se faire exploser.
+      Des "
+    - "cris de d\xE9sespoir et l'odeur de la mort flottaient dans l'air, stimulant
+      les sens de ceux qui \xE9taient encore en vie. Au milieu du ciel, une petite
+      silhouette bandait un gigantesque b\xE2ton, chacun de ses gestes faisant s'enfoncer
+      un peu plus la ville dans le sol. Les nobles ont reconnu l'individu. C'\xE9tait
+      la sorci\xE8re Wendy. Mais le fait de la reconna\xEEtre ne servirait plus \xE0
+      rien. Leurs corps ont fini par exploser. Apr\xE8s quelques minutes, "
+    - " l'endroit o\xF9 se trouvait la cit\xE9 est tomb\xE9 dans le silence. Thewall
+      a \xE9t\xE9 an\xE9anti."
   interactUI: {fileID: 0}
 --- !u!61 &386555943
 BoxCollider2D:
@@ -2732,12 +2874,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386555941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.03, y: 0.899, z: -187.11485}
+  m_LocalPosition: {x: 5.52, y: 0.899, z: -187.11485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411945386}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399445473
 GameObject:
@@ -3252,6 +3394,52 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &489623768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489623770}
+  - component: {fileID: 489623769}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &489623769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489623768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4bee9c010df2c6478676a21e4b292ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1171572787}
+  dialogueText: {fileID: 1392915429}
+  animator: {fileID: 867496880}
+--- !u!4 &489623770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489623768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 623.569, y: 210.63309, z: -433.98117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14355,6 +14543,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  dialogue:
+    name: Une rose en cristal
+    sentences:
+    - "Une rose en cristal tr\xE8s bien faite, deux lettres K et W sont marqu\xE9s
+      sur une p\xE9dale."
   interactUI: {fileID: 0}
 --- !u!61 &824913700
 BoxCollider2D:
@@ -14390,7 +14583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824913698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.79, y: 0.899, z: -187.11485}
+  m_LocalPosition: {x: 7.53, y: 0.899, z: -187.11485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 232314404}
@@ -14469,6 +14662,104 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &867496876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867496877}
+  - component: {fileID: 867496879}
+  - component: {fileID: 867496878}
+  - component: {fileID: 867496880}
+  m_Layer: 5
+  m_Name: Dialogue UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &867496877
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867496876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1171572786}
+  - {fileID: 1392915428}
+  - {fileID: 904730963}
+  m_Father: {fileID: 192087594}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 114.38751}
+  m_SizeDelta: {x: 784.2437, y: 180.2396}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &867496878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867496876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &867496879
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867496876}
+  m_CullTransparentMesh: 1
+--- !u!95 &867496880
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867496876}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc2d9ae57f51e93488f3cc883a98e89a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &868828647
 GameObject:
   m_ObjectHideFlags: 0
@@ -14649,6 +14940,108 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &904730962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904730963}
+  - component: {fileID: 904730965}
+  - component: {fileID: 904730964}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &904730963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904730962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 207907849}
+  m_Father: {fileID: 867496877}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 308.91992, y: -77.71397}
+  m_SizeDelta: {x: 130.1602, y: 21.9433}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &904730964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904730962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489623769}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &904730965
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904730962}
+  m_CullTransparentMesh: 1
 --- !u!1 &906012462
 GameObject:
   m_ObjectHideFlags: 0
@@ -16006,6 +16399,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145169249}
+  m_CullTransparentMesh: 1
+--- !u!1 &1171572785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1171572786}
+  - component: {fileID: 1171572788}
+  - component: {fileID: 1171572787}
+  m_Layer: 5
+  m_Name: NOM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1171572786
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171572785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 867496877}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.6684265, y: 59.7547}
+  m_SizeDelta: {x: -37.191, y: -145.0588}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1171572787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171572785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7c8df7944b90c714d85a88de0a256383, type: 3}
+    m_FontSize: 39
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 42
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: NOM
+--- !u!222 &1171572788
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171572785}
   m_CullTransparentMesh: 1
 --- !u!1 &1171651272
 GameObject:
@@ -18101,6 +18573,85 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1392915427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1392915428}
+  - component: {fileID: 1392915430}
+  - component: {fileID: 1392915429}
+  m_Layer: 5
+  m_Name: DIALOGUECONTENT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1392915428
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392915427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 867496877}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.66845703, y: -17.526001}
+  m_SizeDelta: {x: -37.191, y: -81.807}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1392915429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392915427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7c8df7944b90c714d85a88de0a256383, type: 3}
+    m_FontSize: 26
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: DIALOGUE
+--- !u!222 &1392915430
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392915427}
+  m_CullTransparentMesh: 1
 --- !u!1 &1401428570
 GameObject:
   m_ObjectHideFlags: 0
@@ -19474,6 +20025,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  dialogue:
+    name: Journal du professeur
+    sentences:
+    - "Mercredi 14 mars 2010, sept jours avant le d\xE9part en mission\r\nCe matin,
+      l'Institut a re\xE7u un rapport d'anomalies dans le d\xE9sert de Tajord, \xE0
+      l'est du pays. D'apr\xE8s les informations re\xE7ues, toute la zone est recouverte
+      d'un \xE9pais brouillard depuis quelques jours. Certains villageois vivant
+      \xE0 proximit\xE9 qui tentent d'explorer la zone ont disparu. L'institut de
+      recherche a d\xE9cid\xE9 de "
+    - "me confier la t\xE2che d'explorer cette zone. Une \xE9quipe de 10 personnes
+      sera envoy\xE9e pour m'assister dans mon travail. Le d\xE9part est pr\xE9vu
+      sept jours plus tard. Je dois d\xE8s maintenant chercher des informations sur
+      le d\xE9sert.\r"
+    - "Samedi 17 mars 2010, trois jours avant le d\xE9part en mission\r\n\xC0 la
+      suite des plusieurs jours de recherche, j'ai trouv\xE9 quelque chose d'int\xE9ressant
+      sur le d\xE9sert. Il y a environ cinq cents ans, il existait un royaume portant
+      le m\xEAme nom que le d\xE9sert. Mais pour une raison inconnue, la capitale
+      du pays a disparu du jour au lendemain, ne laissant que les traces qui prouvaient"
+    - "l'existence de la ville. Ainsi, la disparition de la capitale a caus\xE9 la
+      destruction du royaume. L'anomalie du d\xE9sert est-elle li\xE9e \xE0 ce qui
+      s'est pass\xE9 il y a 500 ans ?"
+    - "l'existence de la ville. Ainsi, la disparition de la capitale a caus\xE9 la
+      destruction du royaume. L'anomalie du d\xE9sert est-elle li\xE9e \xE0 ce qui
+      s'est pass\xE9 il y a 500 ans ?"
+    - "Mercredi 21 mars 2010, l\u2019arriv\xE9e sur le lieu\r\nApr\xE8s une demi-journ\xE9e
+      de route, l'\xE9quipe est enfin arriv\xE9e sur le site. Plus pr\xE9cis\xE9ment,
+      nous nous sommes install\xE9s dans le village o\xF9 la premi\xE8re exploration
+      du d\xE9sert a \xE9t\xE9 organis\xE9e. Les villageois nous ont accueillis chaleureusement.
+      Je pense que c'est parce que nous sommes leur espoir de ramener les personnes"
+    - "disparues dans le brouillard. Mais afin d'accomplir cette mission en toute
+      s\xE9curit\xE9, nous avons d\xE9cid\xE9 d'installer d'abord notre \xE9quipement
+      sur place. Il est trop dangereux d'entrer dans un endroit inconnu sans \xEAtre
+      pr\xE9par\xE9. De plus, j'aimerais interroger les villageois sur l'histoire
+      du d\xE9sert. Peut-\xEAtre en savent-ils plus que les informations que nous
+      avons recueillies ? Je pense que cela serait utile pour l'enqu\xEAte sur le
+      lieu."
+    - "Jeudi 22 mars 2010, le deuxi\xE8me jour apr\xE8s l\u2019arriv\xE9e sur le
+      lieu\r\nAujourd'hui, les membres de l'\xE9quipe sont occup\xE9s \xE0 leurs
+      t\xE2ches. Tout le monde a travaill\xE9 dur et cela nous a permis de terminer
+      l'installation du camp avant le coucher du soleil. En plus de surveiller les
+      installations et de contr\xF4ler les machines, \xE0 la pause, je suis all\xE9
+      parler au vieil \xE9rudit du village, M. Mercier. Alors que nous "
+    - "discutions de l'histoire du d\xE9sert, M. Mercier m'a racont\xE9 la l\xE9gende
+      de Thewall. Selon lui, le brouillard est le signe du retour de la sorci\xE8re,
+      celle qui est responsable de la disparition de la capitale de Tajord qui a
+      myst\xE9rieusement disparu par la suite. \xC0 vrai dire, je ne crois pas vraiment
+      ce que M. Mercier m'a dit sur la sorci\xE8re et la magie. Mais je dois toujours
+      \xEAtre vigilant car dans ce monde, il y a aussi beaucoup de choses "
+    - "qui ne peuvent pas \xEAtre expliqu\xE9es par la science. Demain est le jour
+      o\xF9 une partie de notre \xE9quipe va enqu\xEAter sur place. D'apr\xE8s les
+      pr\xE9visions m\xE9t\xE9orologiques, il va pleuvoir tr\xE8s fort. Alors pour
+      \xE9viter les situations accidentelles, je vais donner ce journal au capitaine
+      Val\xE9rian au cas o\xF9 il en aurait besoin. Je sais qu'ils ont d\xE9j\xE0
+      toutes les informations dont ils ont besoin sur l'endroit, mais j'ai un mauvais
+      pressentiment."
+    - "Peut-\xEAtre que mes notes les aideront si des accidents se produisent vraiment
+      ?\n(A la fin du journal se trouve le dessin d'un cercle magique rouge avec
+      le commentaire : \"r\xE9surrection?\")"
   interactUI: {fileID: 0}
 --- !u!61 &1693690640
 BoxCollider2D:
@@ -19509,12 +20118,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693690638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.37, y: 0.899, z: -187.11485}
+  m_LocalPosition: {x: 0.61, y: 0.899, z: -187.11485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 983879602}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784131584
 GameObject:
@@ -19622,6 +20231,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  dialogue:
+    name: Une lettre d'amour
+    sentences:
+    - "Thewall, le 29 novembre 1496 \r\nMon amour,\r\nJ'ai pris la libert\xE9 de
+      t'\xE9crire ces quelques lignes pour te dire combien tu me manques. J'avoue
+      que ce n'est pas dans mes habitudes de t'envoyer une lettre. Mais \xE0 ma grande
+      surprise, l'inspiration m'est venue en"
+    - "contemplant les fleurs du jardin, cela m'a rappel\xE9 les jours o\xF9 nous
+      \xE9tions ensemble.\r\nTu sais, quand quelqu'un nous manque, c'est comme si
+      le monde entier perdait sa couleur. Mais sachant que mon amour pour toi est
+      plus fort que la distance qui nous s\xE9pare, je suis capable de tenir bon.
+      J'esp\xE8re que le jour viendra, et il viendra, o\xF9 je pourrai te tenir dans
+      mes bras une fois de plus. Sentir la chaleur de ta"
+    - "peau et respirer l'odeur de ton corps, voil\xE0 mes d\xE9sirs les plus forts.\r\nJe
+      suis si triste, Wendy. Triste que tu sois si loin de moi. Aujourd'hui, j'ai
+      pass\xE9 un apr\xE8s-midi seul \xE0 la biblioth\xE8que et le livre que je lis
+      sur l'histoire de la magie me fait penser \xE0 toi. Comment \xE7a se passe
+      de ton c\xF4t\xE9 ? Parfois, j'aimerais \xEAtre le soleil qui brille sur toi,
+      te r\xE9chauffer dans cet hiver froid et te voir sourire\r\n"
+    - "en lisant cette lettre.\r\nIl est temps pour moi de poser ma plume, j'esp\xE8re
+      que tu reviendras bient\xF4t.\r\nJe t'embrasse tendrement,\r\nKevin\r\n"
   interactUI: {fileID: 0}
 --- !u!61 &1791894627
 BoxCollider2D:
@@ -19657,12 +20287,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791894625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.28, y: 0.899, z: -187.11485}
+  m_LocalPosition: {x: 3.21, y: 0.899, z: -187.11485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1603803820}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796647631
 GameObject:
@@ -24545,6 +25175,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  dialogue:
+    name: Un cercle magique
+    sentences:
+    - "Une cercle magique r\xE9alis\xE9e avec du sang. "
   interactUI: {fileID: 0}
 --- !u!61 &1927113579
 BoxCollider2D:
@@ -24580,7 +25214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927113577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.206, y: 0.899, z: -187.11485}
+  m_LocalPosition: {x: -1.76, y: 0.899, z: -187.11485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1121661863}
@@ -25136,6 +25770,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInRange: 0
+  dialogue:
+    name: "Article sur l'ex\xE9cution du prince"
+    sentences:
+    - "Journal de Thewall, le 3 mars 1497\r\nLe troisi\xE8me prince ex\xE9cut\xE9\r\nHier
+      \xE0 13h, le troisi\xE8me prince de Tagore a \xE9t\xE9 d\xE9capit\xE9 en public
+      sur la place de la ville de Thewall. Selon des sources officielles, le prince
+      Kevin, qui est l'h\xE9ritier du tr\xF4ne, a \xE9t\xE9 reconnu coupable d'avoir
+      viol\xE9 une femme\n"
+    - "issue d'une famille noble. Son proc\xE8s et sa condamnation ont eu lieu le
+      m\xEAme jour avec l'autorisation de son fr\xE8re, le premier prince, afin de
+      servir d'exemple au royaume et \xE0 la justice.\r"
   interactUI: {fileID: 0}
 --- !u!61 &2089285838
 BoxCollider2D:
@@ -25171,7 +25816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089285836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.191, y: 0.899, z: -187.11485}
+  m_LocalPosition: {x: -3.61, y: 0.899, z: -187.11485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 944281573}

@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class Lettre : MonoBehaviour
 {
     public bool isInRange;
+	public DialogueUI dialogue;
     public Text interactUI;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
@@ -18,7 +19,7 @@ public class Lettre : MonoBehaviour
     {
         if (isInRange == true && Input.GetKeyDown(KeyCode.F))
         {
-            return;
+            TriggerDialogue();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,5 +37,9 @@ public class Lettre : MonoBehaviour
             isInRange = false;
             interactUI.enabled = false;
         }
+    }
+	void TriggerDialogue()
+    {
+        DialogueManager.instance.StartDialogue(dialogue);
     }
 }

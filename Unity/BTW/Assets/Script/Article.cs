@@ -7,8 +7,9 @@ public class Article : MonoBehaviour
 {
     public bool isInRange;
 
+    public DialogueUI dialogue;
     public Text interactUI;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
@@ -19,7 +20,7 @@ public class Article : MonoBehaviour
     {
         if (isInRange == true && Input.GetKeyDown(KeyCode.F))
         {
-            return;
+            TriggerDialogue();
         }
     }
 
@@ -38,5 +39,10 @@ public class Article : MonoBehaviour
             isInRange = false;
             interactUI.enabled = false;
         }
+    }
+
+    void TriggerDialogue()
+    {
+        DialogueManager.instance.StartDialogue(dialogue);
     }
 }
