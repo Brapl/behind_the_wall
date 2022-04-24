@@ -6,6 +6,7 @@ TagManager:
   tags:
   - "objets s\xE9nario"
   - InteractUI
+  - Enemy
   layers:
   - Default
   - TransparentFX
