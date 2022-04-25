@@ -10,6 +10,8 @@ public class EnemyMouv : MonoBehaviour
     private Vector2 movement;
     public float movespeed = 0.5f;
     public Animator animator;
+    public bool isInRange;
+    public int damageOnCollision;
     
     // Start is called before the first frame update
     void Start()
@@ -52,11 +54,31 @@ public class EnemyMouv : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        if (isInRange == false)
+        {
+            moveCharacter(movement);
+        }
     }
 
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * movespeed * Time.deltaTime));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            isInRange = true;
+            PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damageOnCollision);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            isInRange = false;
+        }
     }
 }
