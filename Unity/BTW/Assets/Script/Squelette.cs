@@ -8,6 +8,7 @@ public class Squelette : MonoBehaviour
 	public bool isInRange;
 	public DialogueUI dialogue;
     public Text interactUI;
+
     // Start is called before the first frame update
     void Awake()
     {

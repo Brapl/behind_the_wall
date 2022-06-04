@@ -8,6 +8,7 @@ public class Rose : MonoBehaviour
     public bool isInRange;
 	public DialogueUI dialogue;
     public Text interactUI;
+    public static bool c;
     
     void Awake()
     {
@@ -26,6 +27,7 @@ public class Rose : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            c = true;
             interactUI.enabled = true;
             isInRange = true;
         }

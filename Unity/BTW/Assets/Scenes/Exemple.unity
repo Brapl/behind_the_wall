@@ -2860,7 +2860,7 @@ MonoBehaviour:
       rien. Leurs corps ont fini par exploser. Apr\xE8s quelques minutes, "
     - " l'endroit o\xF9 se trouvait la cit\xE9 est tomb\xE9 dans le silence. Thewall
       a \xE9t\xE9 an\xE9anti."
-  interactUI: {fileID: 0}
+  interactUI: {fileID: 651237774}
 --- !u!61 &386555943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2901,6 +2901,50 @@ Transform:
   - {fileID: 411945386}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395325218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395325220}
+  - component: {fileID: 395325219}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &395325219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395325218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828c2506546c9c740820ed44e23747ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squelet: {fileID: 682994208}
+--- !u!4 &395325220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395325218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.10087691, y: -0.08270767, z: -1.7064302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399445473
 GameObject:
@@ -5109,7 +5153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682994208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2331374, y: -2.3353348, z: 0}
+  m_LocalPosition: {x: 0.94, y: -1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14799,7 +14843,7 @@ MonoBehaviour:
     sentences:
     - "Une rose en cristal tr\xE8s bien faite, deux lettres K et W sont marqu\xE9s
       sur une p\xE9dale."
-  interactUI: {fileID: 0}
+  interactUI: {fileID: 651237774}
 --- !u!61 &824913700
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20788,7 +20832,7 @@ MonoBehaviour:
     - "Peut-\xEAtre que mes notes les aideront si des accidents se produisent vraiment
       ?\n(A la fin du journal se trouve le dessin d'un cercle magique rouge avec
       le commentaire : \"r\xE9surrection?\")"
-  interactUI: {fileID: 0}
+  interactUI: {fileID: 651237774}
 --- !u!61 &1693690640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20957,7 +21001,7 @@ MonoBehaviour:
       te r\xE9chauffer dans cet hiver froid et te voir sourire\r\n"
     - "en lisant cette lettre.\r\nIl est temps pour moi de poser ma plume, j'esp\xE8re
       que tu reviendras bient\xF4t.\r\nJe t'embrasse tendrement,\r\nKevin\r\n"
-  interactUI: {fileID: 0}
+  interactUI: {fileID: 651237774}
 --- !u!61 &1791894627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25884,7 +25928,7 @@ MonoBehaviour:
     name: Un cercle magique
     sentences:
     - "Une cercle magique r\xE9alis\xE9e avec du sang. "
-  interactUI: {fileID: 0}
+  interactUI: {fileID: 651237774}
 --- !u!61 &1927113579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26486,7 +26530,7 @@ MonoBehaviour:
     - "issue d'une famille noble. Son proc\xE8s et sa condamnation ont eu lieu le
       m\xEAme jour avec l'autorisation de son fr\xE8re, le premier prince, afin de
       servir d'exemple au royaume et \xE0 la justice.\r"
-  interactUI: {fileID: 0}
+  interactUI: {fileID: 651237774}
 --- !u!61 &2089285838
 BoxCollider2D:
   m_ObjectHideFlags: 0
