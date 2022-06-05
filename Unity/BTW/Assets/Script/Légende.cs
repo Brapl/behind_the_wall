@@ -8,10 +8,17 @@ public class Légende : MonoBehaviour
     public bool isInRange;
 	public DialogueUI dialogue;
     public Text interactUI;
-    public static bool c;
+    public bool c;
+    public static Légende instance;
     
     void Awake()
     {
+        if(instance!=null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de Légende dans la scène");
+            return;	
+        }
+        instance = this;
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
     }
 

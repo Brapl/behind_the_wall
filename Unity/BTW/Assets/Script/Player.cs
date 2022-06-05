@@ -7,9 +7,20 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     public Rigidbody2D rb;
     Vector2 dir;
-    Animator anim;
+    public Animator anim;
     bool l = true;
     bool r = false;
+    public static Player instance;
+
+    private void Awake()
+    {
+        if(instance!=null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de Player dans la scène");
+            return;	
+        }
+        instance = this;
+    }
 
     private void Start()
     {

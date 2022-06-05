@@ -12,7 +12,21 @@ public class PlayerHealth : MonoBehaviour
     public float invincibilityFlashDelay = 0.2f;
     public float invincibilityTimeAfterHit = 3f;
 
+	public bool died=false;
+
     public HealthBar healthBar;
+
+	public static PlayerHealth instance;
+
+	private void Awake()
+	{
+		if(instance!=null)
+		{
+			Debug.LogWarning("Il y a plus d'une instance de PlayerHealth dans la scène");
+			return;	
+		}
+		instance = this;
+	}
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +45,26 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
+			if(currentHealth<=0)
+			{
+				Die();
+				return;
+			}
             isInvincible = true;
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(HandleInvincibilityDelay());
         }
     }
+
+	public void Die()
+	{
+		Debug.Log("Le joueur est éliminé");
+		died = true;
+		Player.instance.enabled = false;
+		Player.instance.anim.SetTrigger("Die");
+		Player.instance.rb.bodyType=RigidbodyType2D.Kinematic;
+		GameOverManager.instance.OnPlayerDeath();
+	}
 
     public IEnumerator InvincibilityFlash()
     {

@@ -9,9 +9,16 @@ public class Squelette : MonoBehaviour
 	public DialogueUI dialogue;
     public Text interactUI;
 
-    // Start is called before the first frame update
+    public static Squelette instance;
+    
     void Awake()
     {
+        if(instance!=null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de Squelette dans la scène");
+            return;	
+        }
+        instance = this;
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
     }
 

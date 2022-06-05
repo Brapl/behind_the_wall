@@ -12,6 +12,17 @@ public class EnemyMouv : MonoBehaviour
     public Animator animator;
     public bool isInRange;
     public int damageOnCollision;
+    public static EnemyMouv instance;
+
+    private void Awake()
+    {
+        if(instance!=null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de EnemyMouv dans la scène");
+            return;	
+        }
+        instance = this;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -23,10 +34,17 @@ public class EnemyMouv : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = player.position - transform.position;
-        direction.Normalize();
-        movement = direction;
-        SetAnim(direction);
+        if (!PlayerHealth.instance.died && !Exit.instance.finished)
+        {
+            Vector2 direction = player.position - transform.position;
+            direction.Normalize();
+            movement = direction;
+            SetAnim(direction);
+        }
+        else
+        {
+            animator.SetInteger("dir", 0);
+        }
     }
     void SetAnim(Vector2 direction) 
     {
@@ -50,11 +68,16 @@ public class EnemyMouv : MonoBehaviour
         {
             animator.SetInteger("dir", 2);
         }
+
+        if (isInRange)
+        {
+            animator.SetInteger("dir", 0);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (isInRange == false)
+        if (isInRange == false && !PlayerHealth.instance.died && !Exit.instance.finished)
         {
             moveCharacter(movement);
         }
@@ -72,6 +95,7 @@ public class EnemyMouv : MonoBehaviour
             isInRange = true;
             PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damageOnCollision);
+            
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
