@@ -6,9 +6,11 @@ using Photon.Pun;
 
 public class PlayerMultiplayer : MonoBehaviourPunCallbacks
 {
+    public bool onIce;
     float speed = 5f;
     public Rigidbody2D rb;
     Vector2 dir;
+    private Vector2 lastMoveDirection;
     Animator anim;
     bool l = true;
     bool r = false;
@@ -43,9 +45,21 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
 
     void ProcessInput() // Gestion deplacement
     {
+        // Gestion deplacement
         dir.x = Input.GetAxisRaw("Horizontal");
         dir.y = Input.GetAxisRaw("Vertical");
-        rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
+        if (!onIce)
+        {
+            rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
+        }
+        // Deplacement sur glace
+        if (dir.x != 0 || dir.y != 0)
+            lastMoveDirection = dir;
+        if (onIce)
+        {
+            dir = lastMoveDirection;
+            rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
+        }
     }
 
     void SetAnim() // Gestion Animation
@@ -73,6 +87,14 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
             GetComponent<SpriteRenderer>().flipX = false;
             r = true;
             l = false;
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "IceFloor")
+        {
+            onIce = true;
         }
     }
 

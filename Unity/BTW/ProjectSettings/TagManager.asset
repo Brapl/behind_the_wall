@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - InterObj
+  - IceFloor
+  - RabbitHole
+  - Door
+  - Or
+  - EndFloor
   layers:
   - Default
   - TransparentFX
