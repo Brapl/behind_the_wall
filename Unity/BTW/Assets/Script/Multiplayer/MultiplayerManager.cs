@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Realtime;
 using Photon.Pun;
+using TMPro;
 using UnityEngine.UI;
 
 public class MultiplayerManager : MonoBehaviour
 {
     public GameObject playerPrefab;
-    public Text feedbackText;
+    public TextMeshProUGUI feedbackText;
 
     void Start()
     {
@@ -44,7 +46,7 @@ public class MultiplayerManager : MonoBehaviour
         }
         else
         {
-            feedbackText.text += System.Environment.NewLine + message;
+            feedbackText.text += message + "\n";
         }
     }
 }

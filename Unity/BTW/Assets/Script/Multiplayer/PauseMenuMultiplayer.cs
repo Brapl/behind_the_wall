@@ -9,10 +9,12 @@ public class PauseMenuMultiplayer : MonoBehaviourPunCallbacks
     bool gameIsPaused = false;
 
     public GameObject pauseMenu;
+    public GameObject chatSub;
+    private bool isTyping;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)  )
         {
             if (gameIsPaused)
             {
@@ -23,25 +25,39 @@ public class PauseMenuMultiplayer : MonoBehaviourPunCallbacks
                 Pause();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Period))
+        {
+            if (!isTyping)
+            {
+                isTyping = true;
+                chatSub.SetActive(true);
+            }
+            else
+            {
+                ChatManager.SubmitChat();
+                isTyping = false;
+                chatSub.SetActive(false);
+            }
+        }
     }
 
     public void Pause()
     {
         Cursor.visible = true;
         gameIsPaused = true;
-        pauseMenu.gameObject.SetActive(true);
+        pauseMenu.SetActive(true);
     }
 
     public void Resume()
     {
         Cursor.visible = false;
         gameIsPaused = false;
-        pauseMenu.gameObject.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     public void MainMenu()
     {
-        
+       
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("MainMenu");
     }
