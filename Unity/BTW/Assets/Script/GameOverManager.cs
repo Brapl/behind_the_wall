@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class GameOverManager : MonoBehaviour
 
     public void MainMenuButton()
     {
-        Debug.Log("MainMenu");
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 
     public void ExitBD()
