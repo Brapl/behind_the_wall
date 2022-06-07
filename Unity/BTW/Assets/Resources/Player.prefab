@@ -14,6 +14,12 @@ GameObject:
   - component: {fileID: 5063811268413265108}
   - component: {fileID: 6518797957154430117}
   - component: {fileID: 4766309870778759991}
+  - component: {fileID: 7656131825171172340}
+  - component: {fileID: -8887361394095947183}
+  - component: {fileID: 2508894330177786026}
+  - component: {fileID: 1609909050247890429}
+  - component: {fileID: -373534691516843294}
+  - component: {fileID: -5785472388850245536}
   - component: {fileID: -7631306879144762137}
   - component: {fileID: 5817776503925791636}
   - component: {fileID: 1866096349441125551}
@@ -170,6 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93478c404a638674395075450cbe9017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onIce: 0
+  inHole: 0
+  hole: {fileID: 0}
   rb: {fileID: 5063811268413265108}
   _posOffset: {x: 0, y: 0, z: 0}
   timeOffset: 0

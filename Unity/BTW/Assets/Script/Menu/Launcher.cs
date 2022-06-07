@@ -110,7 +110,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             Debug.Log("We load the 'Room for 1' ");
  
-            PhotonNetwork.LoadLevel("Multiplayer");
+            PhotonNetwork.LoadLevel("test");
         }
     }
 }
