@@ -11,35 +11,65 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
     public Rigidbody2D rb;
     Vector2 dir;
     private Vector2 lastMoveDirection;
-    Animator anim;
-    bool l = true;
-    bool r = false;
+    public Vector3 _posOffset;
+    public float timeOffset;
+    private Vector3 _velocity;
+    private bool _isMoving;
+    private bool _isTyping;
+    public AudioSource audioSrc;
+    Vector2 _dir;
+    Animator _anim;
+    Camera _cam;
+    bool _l = true;
+    bool _r = false;
 
-    bool isGamePaused = false;
-
+    private bool _isGamePaused = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        _anim = GetComponent<Animator>();
+        _cam = Camera.main;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Period))
         {
-            if (!isGamePaused)
+            if (!_isTyping)
             {
-                isGamePaused = true;
+                _isTyping = true;
             }
             else
             {
-                isGamePaused = false;
+                _isTyping = false;
             }
         }
-        else if (photonView.IsMine && !isGamePaused) // Sinon un utilisateur peu déplacer tous les joueurs
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!_isGamePaused)
+            {
+                _isGamePaused = true;
+            }
+            else
+            {
+                _isGamePaused = false;
+            }
+        }
+        else if (photonView.IsMine && !_isGamePaused && !_isTyping) // Sinon un utilisateur peu déplacer tous les joueurs
         {
             ProcessInput();
             SetAnim();
+            
+            if (_isMoving)
+            {
+                if (!audioSrc.isPlaying)
+                    audioSrc.Play();
+            }
+            else
+                audioSrc.Stop();
+            
+            _cam.transform.position = Vector3.SmoothDamp(transform.position, new Vector3(rb.position.x,rb.position.y,-1)  + _posOffset, ref _velocity,
+                timeOffset);
         }
     }
 
@@ -64,29 +94,37 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
 
     void SetAnim() // Gestion Animation
     {
-        if (dir.x == 0 && dir.y == 0 && r) // Inactif  Gauche
+        if (_dir.x == 0 && _dir.y == 0 && _r) // Inactif  Gauche
         {
-            anim.SetInteger("Mouv", 0);
+            _anim.SetInteger("Mouv", 0);
             GetComponent<SpriteRenderer>().flipX = false;
+            _isMoving = false;
         }
-        else if (dir.x == 0 && dir.y == 0 && l)
+        else if (_dir.x == 0 && _dir.y == 0 && _l)
         {
-            anim.SetInteger("Mouv", 0); // Inactif Droite
+            _anim.SetInteger("Mouv", 0); // Inactif Droite
             GetComponent<SpriteRenderer>().flipX = true;
+            _isMoving = false;
         }
-        else if (dir.x > 0) // Droite
+        else if (_dir.x > 0) // Droite
         {
-            anim.SetInteger("Mouv", 1);
+            _anim.SetInteger("Mouv", 1);
             GetComponent<SpriteRenderer>().flipX = true;
-            r = false;   // MaJ de l'orientation pour
-            l = true;  // la prochaine inactivitee
+            _r = false;   // MaJ de l'orientation pour
+            _l = true;  // la prochaine inactivitee
+            _isMoving = true;
         }
-        else if (dir.x < 0) // Gauche
+        else if (_dir.x < 0) // Gauche
         {
-            anim.SetInteger("Mouv", 1);
+            _anim.SetInteger("Mouv", 1);
             GetComponent<SpriteRenderer>().flipX = false;
-            r = true;
-            l = false;
+            _r = true;
+            _l = false;
+            _isMoving = true;
+        }
+        else if (_dir.x==0)
+        {
+            _isMoving = true; 
         }
     }
     
@@ -95,6 +133,14 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
         if (collision.tag == "IceFloor")
         {
             onIce = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "IceFloor")
+        {
+            onIce = false;
         }
     }
 

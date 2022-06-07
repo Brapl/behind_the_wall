@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Realtime;
 using Photon.Pun;
+using TMPro;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
     public Button coButton;
     public Text feedbackText;
+    public TMP_InputField input;
+    public Button setNameButton;
 
     public byte maxPlayers = 4;
     bool isConnecting;
@@ -18,21 +21,41 @@ public class Launcher : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = true;
     }
 
+    public void NameAvialble()
+    {
+        if (input.text.Length > 0)
+        {
+            setNameButton.interactable = true;
+        }
+    }
+
+    public void SetName()
+    {
+        PhotonNetwork.NickName = input.text;
+    }
+
     public void Connect()
     {
-        feedbackText.text = "";
-        isConnecting = true;
-        coButton.interactable = false;
-
-        if (PhotonNetwork.IsConnected)
+        if (PhotonNetwork.NickName != "" && !(PhotonNetwork.NickName is null))
         {
-            LogFeedback("Joining Room...");
-            PhotonNetwork.JoinRandomRoom();
+            feedbackText.text = "";
+            isConnecting = true;
+            coButton.interactable = false;
+            
+            if (PhotonNetwork.IsConnected)
+            {
+                LogFeedback("Joining Room...");
+                PhotonNetwork.JoinRandomRoom();
+            }
+            else
+            {
+                LogFeedback("Connecting...");
+                PhotonNetwork.ConnectUsingSettings();
+            }
         }
         else
         {
-            LogFeedback("Connecting...");
-            PhotonNetwork.ConnectUsingSettings();
+            LogFeedback("Username is missing.");
         }
     }
 
