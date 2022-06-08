@@ -39,7 +39,6 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         gameIsPaused = false;
-        Cursor.visible = false;
         dialogUI.gameObject.SetActive(true);
         interactUI.gameObject.SetActive(true);
         pauseMenu.gameObject.SetActive(false);

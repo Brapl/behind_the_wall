@@ -32,7 +32,6 @@ public class MainMenu : MonoBehaviour
 
     public void NewGameDialogYes()
     {
-        Cursor.visible = false;
         SceneManager.LoadScene(_newGameLevel);
     }
 
