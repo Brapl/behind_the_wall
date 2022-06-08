@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1857428853881334452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857428853881334450}
+  - component: {fileID: 1857428853881334453}
+  - component: {fileID: 1857428853881334451}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1857428853881334450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857428853881334452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.10087691, y: -0.08270767, z: -1.7064302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1857428853881334453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857428853881334452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828c2506546c9c740820ed44e23747ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squelet: {fileID: 0}
+--- !u!114 &1857428853881334451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857428853881334452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde11196840ede04aaacf0bf4a35f258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 0}
+  dialogue1:
+    name: 
+    sentences:
+    - "H\xE9las, tu ne t'es pas \xE9chapp\xE9 du labyrinthe. Ton corps y restera
+      pour l'\xE9ternit\xE9 et ton \xE2me ne sera jamais en paix."
+  dialogue2:
+    name: 
+    sentences:
+    - "Apr\xE8s d'innombrables dangers, tu t'es finalement \xE9chapp\xE9 de ce labyrinthe."
+    - "Tu as pris la gemme rouge en partant. Apr\xE8s \xEAtre retourn\xE9 en ville,
+      tu te sens toujours observ\xE9 par un regard sinistre. Plus le temps passe,
+      plus tu te sens mal \xE0 l'aise. Tu as un tr\xE8s mauvais pressentiment."
+    - "Finalement, tu n'en peux plus. Tu te r\xE9fugies chez toi pour \xE9viter tout
+      danger. "
+    - "Mais deux jours plus tard, la police a trouv\xE9 ton corps \xE0 ton domicile.
+      Le cadavre \xE9tait dans un \xE9tat horrible, comme si tu \xE9tais mort d'une
+      \xE9norme douleur."
+  dialogue3:
+    name: 
+    sentences:
+    - "Apr\xE8s d'innombrables dangers, tu t'es finalement \xE9chapp\xE9 de ce labyrinthe."
+    - "Tu n'as pas pris la gemme rouge en partant. Gr\xE2ce \xE0 cette action, le
+      ma\xEEtre du labyrinthe ne viendra pas \xE0 vous dans le futur."
+    - "Bien jou\xE9 \xE0 toi!! tu as r\xE9sist\xE9 \xE0 la tentation de la gemme
+      rouge et tu es sorti vivant du labyrinthe. F\xE9licitation!!"

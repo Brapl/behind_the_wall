@@ -6,11 +6,8 @@ using Photon.Pun;
 
 public class PlayerMultiplayer : MonoBehaviourPunCallbacks
 {
-    public bool onIce;
-    float speed = 5f;
+    float _speed = 5f;
     public Rigidbody2D rb;
-    Vector2 dir;
-    private Vector2 lastMoveDirection;
     public Vector3 _posOffset;
     public float timeOffset;
     private Vector3 _velocity;
@@ -22,8 +19,25 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
     Camera _cam;
     bool _l = true;
     bool _r = false;
+    public static PlayerMultiplayer instance;
+    
+    private Vector2 lastMoveDirection;
+    public bool onIce;
+    public bool onEnd;
+    private int points;
 
     private bool _isGamePaused = false;
+    
+    private void Awake()
+    {
+        if(instance!=null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de Player dans la scène");
+            return;
+        }
+        instance = this;
+    }
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,63 +47,55 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Period))
+        if (!onEnd && photonView.IsMine)
         {
-            if (!_isTyping)
+            // Gestion deplacement
+            _dir.x = Input.GetAxisRaw("Horizontal");
+            _dir.y = Input.GetAxisRaw("Vertical");
+            if (!onIce)
             {
-                _isTyping = true;
+                rb.MovePosition(rb.position + _dir * _speed * Time.fixedDeltaTime);
+                SetAnim();
             }
-            else
+            // Deplacement sur glace
+            if (_dir.x != 0 || _dir.y != 0)
+                lastMoveDirection = _dir;
+            if (onIce)
             {
-                _isTyping = false;
+                _dir = lastMoveDirection;
+                rb.MovePosition(rb.position + _dir * _speed * Time.fixedDeltaTime);
+                SetAnim();
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!_isGamePaused)
-            {
-                _isGamePaused = true;
-            }
-            else
-            {
-                _isGamePaused = false;
-            }
-        }
-        else if (photonView.IsMine && !_isGamePaused && !_isTyping) // Sinon un utilisateur peu déplacer tous les joueurs
-        {
-            ProcessInput();
-            SetAnim();
-            
-            if (_isMoving)
-            {
-                if (!audioSrc.isPlaying)
-                    audioSrc.Play();
-            }
-            else
-                audioSrc.Stop();
-            
-            _cam.transform.position = Vector3.SmoothDamp(transform.position, new Vector3(rb.position.x,rb.position.y,-1)  + _posOffset, ref _velocity,
-                timeOffset);
         }
     }
 
     void ProcessInput() // Gestion deplacement
     {
         // Gestion deplacement
-        dir.x = Input.GetAxisRaw("Horizontal");
-        dir.y = Input.GetAxisRaw("Vertical");
+        _dir.x = Input.GetAxisRaw("Horizontal");
+        _dir.y = Input.GetAxisRaw("Vertical");
         if (!onIce)
         {
-            rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + _dir * _speed * Time.fixedDeltaTime);
+            SetAnim();
         }
         // Deplacement sur glace
-        if (dir.x != 0 || dir.y != 0)
-            lastMoveDirection = dir;
+        if (_dir.x != 0 || _dir.y != 0)
+            lastMoveDirection = _dir;
         if (onIce)
         {
-            dir = lastMoveDirection;
-            rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
+            _dir = lastMoveDirection;
+            rb.MovePosition(rb.position + _dir * _speed * Time.fixedDeltaTime);
+            SetAnim();
         }
+            
+        if (_isMoving)
+        {
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        }
+        else
+            audioSrc.Stop();
     }
 
     void SetAnim() // Gestion Animation
@@ -134,6 +140,10 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
         {
             onIce = true;
         }
+        if (collision.tag == "EndFloor")
+        {
+            onEnd = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -142,10 +152,14 @@ public class PlayerMultiplayer : MonoBehaviourPunCallbacks
         {
             onIce = false;
         }
+        if (collision.tag == "EndFloor")
+        {
+            onEnd = false;
+        }
     }
 
     void FixedUpdate()
     {
-
+        rb.velocity = new Vector2(_dir.x, rb.velocity.y);
     }
 }

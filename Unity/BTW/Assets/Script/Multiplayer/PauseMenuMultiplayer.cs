@@ -10,6 +10,7 @@ public class PauseMenuMultiplayer : MonoBehaviourPunCallbacks
 
     public GameObject pauseMenu;
     public GameObject chatSub;
+    public GameObject dialogUI;
     private bool isTyping;
 
     void Update()
@@ -46,6 +47,7 @@ public class PauseMenuMultiplayer : MonoBehaviourPunCallbacks
         Cursor.visible = true;
         gameIsPaused = true;
         pauseMenu.SetActive(true);
+        dialogUI.SetActive(false);
     }
 
     public void Resume()
@@ -53,6 +55,7 @@ public class PauseMenuMultiplayer : MonoBehaviourPunCallbacks
         Cursor.visible = false;
         gameIsPaused = false;
         pauseMenu.SetActive(false);
+        dialogUI.SetActive(true);
     }
 
     public void MainMenu()

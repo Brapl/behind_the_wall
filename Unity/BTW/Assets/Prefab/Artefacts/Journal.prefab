@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3466944099565415738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3466944099565415737}
+  - component: {fileID: 3466944099565415736}
+  m_Layer: 0
+  m_Name: Journal du professeur
+  m_TagString: "objets s\xE9nario"
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3466944099565415737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466944099565415738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.04799986, y: 0.015900016, z: 187.11485}
+  m_LocalScale: {x: 1.3, y: 1.4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3466944100407495066}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3466944099565415736
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466944099565415738}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e34e3f6b5e3642141bf74367e5f4f9ce, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &3466944100407495045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3466944100407495066}
+  - component: {fileID: 3466944100407495067}
+  - component: {fileID: 3466944100407495044}
+  - component: {fileID: 699985170214028853}
+  m_Layer: 0
+  m_Name: Journal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3466944100407495066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466944100407495045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.61, y: 0.899, z: -187.11485}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3466944099565415737}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3466944100407495067
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466944100407495045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &3466944100407495044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466944100407495045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb75fa716822344aba24fec4ffb7762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRange: 0
+  dialogue:
+    name: Journal du professeur
+    sentences:
+    - "Mercredi 14 mars 2010, sept jours avant le d\xE9part en mission\r\nCe matin,
+      l'Institut a re\xE7u un rapport d'anomalies dans le d\xE9sert de Tajord, \xE0
+      l'est du pays. D'apr\xE8s les informations re\xE7ues, toute la zone est recouverte
+      d'un \xE9pais brouillard depuis quelques jours. Certains villageois vivant
+      \xE0 proximit\xE9 qui tentent d'explorer la zone ont disparu. L'institut de
+      recherche a d\xE9cid\xE9 de "
+    - "me confier la t\xE2che d'explorer cette zone. Une \xE9quipe de 10 personnes
+      sera envoy\xE9e pour m'assister dans mon travail. Le d\xE9part est pr\xE9vu
+      sept jours plus tard. Je dois d\xE8s maintenant chercher des informations sur
+      le d\xE9sert.\r"
+    - "Samedi 17 mars 2010, trois jours avant le d\xE9part en mission\r\n\xC0 la
+      suite des plusieurs jours de recherche, j'ai trouv\xE9 quelque chose d'int\xE9ressant
+      sur le d\xE9sert. Il y a environ cinq cents ans, il existait un royaume portant
+      le m\xEAme nom que le d\xE9sert. Mais pour une raison inconnue, la capitale
+      du pays a disparu du jour au lendemain, ne laissant que les traces qui prouvaient"
+    - "l'existence de la ville. Ainsi, la disparition de la capitale a caus\xE9 la
+      destruction du royaume. L'anomalie du d\xE9sert est-elle li\xE9e \xE0 ce qui
+      s'est pass\xE9 il y a 500 ans ?"
+    - "l'existence de la ville. Ainsi, la disparition de la capitale a caus\xE9 la
+      destruction du royaume. L'anomalie du d\xE9sert est-elle li\xE9e \xE0 ce qui
+      s'est pass\xE9 il y a 500 ans ?"
+    - "Mercredi 21 mars 2010, l\u2019arriv\xE9e sur le lieu\r\nApr\xE8s une demi-journ\xE9e
+      de route, l'\xE9quipe est enfin arriv\xE9e sur le site. Plus pr\xE9cis\xE9ment,
+      nous nous sommes install\xE9s dans le village o\xF9 la premi\xE8re exploration
+      du d\xE9sert a \xE9t\xE9 organis\xE9e. Les villageois nous ont accueillis chaleureusement.
+      Je pense que c'est parce que nous sommes leur espoir de ramener les personnes"
+    - "disparues dans le brouillard. Mais afin d'accomplir cette mission en toute
+      s\xE9curit\xE9, nous avons d\xE9cid\xE9 d'installer d'abord notre \xE9quipement
+      sur place. Il est trop dangereux d'entrer dans un endroit inconnu sans \xEAtre
+      pr\xE9par\xE9. De plus, j'aimerais interroger les villageois sur l'histoire
+      du d\xE9sert. Peut-\xEAtre en savent-ils plus que les informations que nous
+      avons recueillies ? Je pense que cela serait utile pour l'enqu\xEAte sur le
+      lieu."
+    - "Jeudi 22 mars 2010, le deuxi\xE8me jour apr\xE8s l\u2019arriv\xE9e sur le
+      lieu\r\nAujourd'hui, les membres de l'\xE9quipe sont occup\xE9s \xE0 leurs
+      t\xE2ches. Tout le monde a travaill\xE9 dur et cela nous a permis de terminer
+      l'installation du camp avant le coucher du soleil. En plus de surveiller les
+      installations et de contr\xF4ler les machines, \xE0 la pause, je suis all\xE9
+      parler au vieil \xE9rudit du village, M. Mercier. Alors que nous "
+    - "discutions de l'histoire du d\xE9sert, M. Mercier m'a racont\xE9 la l\xE9gende
+      de Thewall. Selon lui, le brouillard est le signe du retour de la sorci\xE8re,
+      celle qui est responsable de la disparition de la capitale de Tajord qui a
+      myst\xE9rieusement disparu par la suite. \xC0 vrai dire, je ne crois pas vraiment
+      ce que M. Mercier m'a dit sur la sorci\xE8re et la magie. Mais je dois toujours
+      \xEAtre vigilant car dans ce monde, il y a aussi beaucoup de choses "
+    - "qui ne peuvent pas \xEAtre expliqu\xE9es par la science. Demain est le jour
+      o\xF9 une partie de notre \xE9quipe va enqu\xEAter sur place. D'apr\xE8s les
+      pr\xE9visions m\xE9t\xE9orologiques, il va pleuvoir tr\xE8s fort. Alors pour
+      \xE9viter les situations accidentelles, je vais donner ce journal au capitaine
+      Val\xE9rian au cas o\xF9 il en aurait besoin. Je sais qu'ils ont d\xE9j\xE0
+      toutes les informations dont ils ont besoin sur l'endroit, mais j'ai un mauvais
+      pressentiment."
+    - "Peut-\xEAtre que mes notes les aideront si des accidents se produisent vraiment
+      ?\n(A la fin du journal se trouve le dessin d'un cercle magique rouge avec
+      le commentaire : \"r\xE9surrection?\")"
+  interactUI: {fileID: 0}
+  c: 0
+--- !u!212 &699985170214028853
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466944100407495045}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: e34e3f6b5e3642141bf74367e5f4f9ce, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0

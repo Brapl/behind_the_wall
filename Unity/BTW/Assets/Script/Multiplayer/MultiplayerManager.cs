@@ -13,9 +13,24 @@ public class MultiplayerManager : MonoBehaviour
     public GameObject playerPrefab;
     public TextMeshProUGUI feedbackText;
 
+    private GameObject plaayerCam;
+    private GameObject cameraCam;
+    public Vector3 offset;
+
     void Start()
     {
-        PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(2,-1,0), Quaternion.identity, 0);
+        GameObject p = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0,2,0), Quaternion.identity, 0);
+        plaayerCam = p;
+        cameraCam = Camera.main.gameObject;
+        cameraCam.transform.position = plaayerCam.transform.position;
+    }
+    
+    private void FixedUpdate()
+    {
+        if (plaayerCam != null && cameraCam != null)
+        {
+            cameraCam.transform.position = plaayerCam.transform.position + offset;
+        }
     }
 
     public void OnPlayerEnterRoom(Player other)

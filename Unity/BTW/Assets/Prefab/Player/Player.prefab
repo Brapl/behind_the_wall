@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -8575352337892907558}
   - component: {fileID: 931684617143222043}
   - component: {fileID: 8945984407048430167}
+  - component: {fileID: 1720197166614181088}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -173,11 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ef4b7bbd0cd45488c3bf1f098b8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onIce: 0
-  inHole: 0
-  hole: {fileID: 0}
   speed: 5
   rb: {fileID: 3161554905848207509}
+  anim: {fileID: 0}
+  onIce: 0
+  onEnd: 0
 --- !u!114 &3161554905848207534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,9 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2ceaea5078828489cbcdc4f9713510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLight: {fileID: 0}
   currentInterObj: {fileID: 0}
-  currentInterScript: {fileID: 0}
-  inventaire: {fileID: 3161554905848207535}
+  vision: 0
 --- !u!114 &-7548461080669230863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3161554905848207509}
+  _posOffset: {x: 0, y: 0, z: 0}
+  timeOffset: 0
+  audioSrc: {fileID: 0}
 --- !u!114 &3161554905848207535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +228,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  or: 0
 --- !u!114 &-8575352337892907558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +290,26 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1720197166614181088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3161554905848207510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5e94f370581194bbe08cff0e7e29c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  graphics: {fileID: 0}
+  isInvincible: 0
+  invincibilityFlashDelay: 0.2
+  invincibilityTimeAfterHit: 3
+  died: 0
+  healthBar: {fileID: 0}
 --- !u!1 &3161554906372439030
 GameObject:
   m_ObjectHideFlags: 0
